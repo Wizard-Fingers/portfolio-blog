@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
+import { Providers } from "@/components/providers";
 
 const nunito = Nunito({ subsets: ["latin"], variable: "---font-nunito" });
 
@@ -24,10 +25,12 @@ export default function RootLayout({
           nunito.variable
         )}
       >
-        <div className="relative flex min-h-dvh flex-col bg-background">
-          <SiteHeader />
-          <main className="flex-1">{children}</main>
-        </div>
+        <Providers>
+          <div className="relative flex min-h-dvh flex-col bg-background">
+            <SiteHeader />
+            <main className="flex-1">{children}</main>
+          </div>
+        </Providers>
       </body>
     </html>
   );

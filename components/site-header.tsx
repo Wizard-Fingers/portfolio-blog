@@ -5,6 +5,7 @@ import { buttonVariants } from "./ui/button";
 import { Icons } from "./icons";
 import { MainNav } from "./main-nav";
 import { MobileNav } from "./mobile-nav";
+import { ModeToggle } from "./mode-toggle";
 
 export function SiteHeader() {
   return (
@@ -63,6 +64,7 @@ export function SiteHeader() {
                 </div>
               </Link>
             </section>
+            <ModeToggle />
             <MobileNav />
           </nav>
         </div>
