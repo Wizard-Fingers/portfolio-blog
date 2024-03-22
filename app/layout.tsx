@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
+import { SiteHeader } from "@/components/site-header";
 
 const nunito = Nunito({ subsets: ["latin"], variable: "---font-nunito" });
 
@@ -23,7 +24,10 @@ export default function RootLayout({
           nunito.variable
         )}
       >
-        {children}
+        <div className="relative flex min-h-dvh flex-col bg-background">
+          <SiteHeader />
+          <main className="flex-1">{children}</main>
+        </div>
       </body>
     </html>
   );
