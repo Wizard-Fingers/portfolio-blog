@@ -31,6 +31,9 @@
     "eslint": "latest",
     "eslint-config-next": "latest",
     "postcss": "latest",
+    "rehype-autolink-headings": "^7.1.0",
+    "rehype-pretty-code": "^0.13.0",
+    "rehype-slug": "^6.0.0",
     "tailwindcss": "latest",
     "typescript": "latest",
     "velite": "^0.1.0-beta.12"
