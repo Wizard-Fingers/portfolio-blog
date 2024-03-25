@@ -7,5 +7,6 @@
     "rehype",
     "tailwindcss",
     "velite"
-  ]
+  ],
+  "editor.formatOnSave": true
 }

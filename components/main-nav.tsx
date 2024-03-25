@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 export function MainNav() {
   const pathname = usePathname();
   return (
-    <nav className="flex items-center space-x-4 lg:space-x-6">
-      <Link href="/" className="mr-6 flex items-center space-x-2">
+    <nav className="flex items-center space-x-4 lg:space-x-6 header-font lg:font-bold">
+      <Link href="/" className="mr-4 flex items-center space-x-2">
         <Icons.logo />
       </Link>
       <Link
@@ -29,6 +29,15 @@ export function MainNav() {
         )}
       >
         ABOUT
+      </Link>
+      <Link
+        href="/about"
+        className={cn(
+          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
+          pathname === "/projects" ? "text-foreground" : "text-foreground/60"
+        )}
+      >
+        PROJECTS
       </Link>
     </nav>
   );

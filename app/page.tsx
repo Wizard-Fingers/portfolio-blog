@@ -11,29 +11,33 @@ export default function Home() {
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
         <div className="container flex flex-col gap-4 text-center">
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-balance">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-balance header-font">
             Hi, I&apos;m Arthur
           </h1>
-          <p className="max-w-[40rem] mx-auto text-muted-foreground sm:text-xl text-balance">
+
+          <p className="max-w-[40rem] mx-auto mt-4 text-muted-foreground sm:text-xl text-balance body-font">
             welcome to my portfolio and corner of the web where I&apos;m sharing
             my thoughts on my blog.
           </p>
-          <div className="flex flex-col gap-4 justify-center sm:flex-row">
+          <div className="flex flex-col gap-4 justify-center sm:flex-row mt-4">
             <Link
               href="/blog"
-              className={cn(buttonVariants({ size: "lg" }), "w-full sm:w-fit")}
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "w-full sm:w-fit handwritten-font"
+              )}
             >
-              View my Blog
+              my Blog
             </Link>
             <Link
               href={siteConfig.links.github}
               target="_blank"
               className={cn(
                 buttonVariants({ variant: "outline", size: "lg" }),
-                "w-full sm:w-fit"
+                "w-full sm:w-fit handwritten-font"
               )}
             >
-              View my Github
+              my Github
             </Link>
           </div>
         </div>

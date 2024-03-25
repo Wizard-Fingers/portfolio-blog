@@ -9,8 +9,8 @@ import { ModeToggle } from "./mode-toggle";
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 w-full bg-background/95 shadow-sm backdrop-blur supports-[backdrop-filter]bg-background/60 z-10">
-      <div className="container flex h-14 max-w-screen-xl items-center">
+    <header className="sticky top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]bg-background/30 z-10">
+      <div className="container flex h-[4rem] max-w-screen-xl items-center">
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
@@ -21,13 +21,8 @@ export function SiteHeader() {
                 rel="noreferrer"
                 className="lg:mx-2"
               >
-                <div
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "w-10 px-0 hidden sm:inline-flex"
-                  )}
-                >
-                  <Icons.facebook className="h-5 w5" />
+                <div className="w-10 px-0 hidden sm:inline-flex justify-center">
+                  <Icons.facebook className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6" />
                   <span className="sr-only">facebook</span>
                 </div>
               </Link>
@@ -37,13 +32,8 @@ export function SiteHeader() {
                 rel="noreferrer"
                 className="lg:mx-2"
               >
-                <div
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "w-10 px-0 hidden sm:inline-flex"
-                  )}
-                >
-                  <Icons.linkedin className="h-5 w5" />
+                <div className="w-10 px-0 hidden sm:inline-flex justify-center">
+                  <Icons.linkedin className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6" />
                   <span className="sr-only">linkedin</span>
                 </div>
               </Link>
@@ -53,13 +43,8 @@ export function SiteHeader() {
                 rel="noreferrer"
                 className="lg:mx-2"
               >
-                <div
-                  className={cn(
-                    buttonVariants({ variant: "ghost" }),
-                    "w-10 px-0 hidden sm:inline-flex"
-                  )}
-                >
-                  <Icons.github className="h-5 w5" />
+                <div className="w-10 px-0 hidden sm:inline-flex justify-center">
+                  <Icons.github className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6" />
                   <span className="sr-only">github</span>
                 </div>
               </Link>
