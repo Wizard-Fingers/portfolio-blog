@@ -22,7 +22,7 @@ export function SiteHeader() {
                 className="lg:mx-2"
               >
                 <div className="w-10 px-0 hidden sm:inline-flex justify-center">
-                  <Icons.facebook className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6" />
+                  <Icons.facebook className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6 hover:drop-shadow-md hover:scale-110" />
                   <span className="sr-only">facebook</span>
                 </div>
               </Link>
@@ -33,7 +33,7 @@ export function SiteHeader() {
                 className="lg:mx-2"
               >
                 <div className="w-10 px-0 hidden sm:inline-flex justify-center">
-                  <Icons.linkedin className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6" />
+                  <Icons.linkedin className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6 hover:drop-shadow-md hover:scale-110" />
                   <span className="sr-only">linkedin</span>
                 </div>
               </Link>
@@ -44,7 +44,7 @@ export function SiteHeader() {
                 className="lg:mx-2"
               >
                 <div className="w-10 px-0 hidden sm:inline-flex justify-center">
-                  <Icons.github className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6" />
+                  <Icons.github className="h-5 w-5 text-brandCol2 dark:text-brandCol1 transition-colors duration-300 ease-in-out hover:text-brandCol5 dark:hover:text-brandCol6 hover:drop-shadow-md hover:scale-110" />
                   <span className="sr-only">github</span>
                 </div>
               </Link>

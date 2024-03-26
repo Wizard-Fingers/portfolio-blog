@@ -12,12 +12,15 @@ export default function Home() {
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
         <div className="container flex flex-col gap-4 text-center">
           <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl text-balance header-font">
-            Hi, I&apos;m Arthur
+            Hi, I&apos;m <span className="tracking-widest">Arthur</span>
           </h1>
 
           <p className="max-w-[40rem] mx-auto mt-4 text-muted-foreground sm:text-xl text-balance body-font">
-            welcome to my portfolio and corner of the web where I&apos;m sharing
-            my thoughts on my blog.
+            Welcome to my portfolio and personal corner of the web. As a
+            passionate web developer, I love building websites and helping
+            others achieve their online goals. Whether you're here to explore my
+            projects or gain insights from my blog, I'm thrilled to share my
+            journey with you.
           </p>
           <div className="flex flex-col gap-4 justify-center sm:flex-row mt-4">
             <Link

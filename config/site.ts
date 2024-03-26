@@ -6,7 +6,7 @@ export const siteConfig = {
   links: {
     github: "https://github.com/Wizard-Fingers",
     facebook: "https://www.facebook.com/arthur.b.beckett/",
-    linkedin: "www.linkedin.com/in/art-beckett-3b19b7209",
+    linkedin: "https://www.linkedin.com/in/art-beckett-3b19b7209",
   },
 };
 

@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import Link, { LinkProps } from "next/link";
 import { Icons } from "./icons";
 import { siteConfig } from "@/config/site";
+import { FaArrowLeft } from "react-icons/fa6";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -25,41 +26,71 @@ export function MobileNav() {
           href="/"
           className="flex items-center"
         >
-          <Icons.logo />
+          <Link href="/">
+            <Icons.navLogo />
+          </Link>
         </MobileLink>
-        <div className="flex flex-col gap-4 mt-4">
+        <div className="flex flex-col gap-6 mt-8 text-xl">
           <MobileLink onOpenChange={setOpen} href="/blog">
-            BLOG
+            <div className="flex">
+              BLOG{" "}
+              <div className="ml-2 flex items-center dark:text-brandCol6 text-brandCol5">
+                <FaArrowLeft />
+              </div>
+            </div>
           </MobileLink>
           <MobileLink onOpenChange={setOpen} href="/about">
-            ABOUT
+            <div className="flex">
+              ABOUT{" "}
+              <div className="ml-2 flex items-center dark:text-brandCol6 text-brandCol5">
+                {" "}
+                <FaArrowLeft />
+              </div>
+            </div>
           </MobileLink>
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href={siteConfig.links.facebook}
-          >
-            <div className="flex items-center gap-2">
-              <Icons.facebook className="h-5 w-5" />
-              <span className="sr-only">Facebook</span>
+          <MobileLink onOpenChange={setOpen} href="/projects">
+            <div className="flex">
+              PROJECTS{" "}
+              <div className="ml-2 flex items-center dark:text-brandCol6 text-brandCol5">
+                {" "}
+                <FaArrowLeft />
+              </div>
             </div>
-          </Link>
-          <Link
-            target="_blank"
-            rel="noreferrer"
-            href={siteConfig.links.linkedin}
-          >
-            <div className="flex items-center gap-2">
-              <Icons.linkedin className="h-5 w-5" />
-              <span className="sr-only">Linkedin</span>
-            </div>
-          </Link>
-          <Link target="_blank" rel="noreferrer" href={siteConfig.links.github}>
-            <div className="flex items-center gap-2">
-              <Icons.github className="h-5 w-5" />
-              <span className="sr-only">Github</span>
-            </div>
-          </Link>
+          </MobileLink>
+
+          <div className="flex justify-around mt-[3rem]">
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.facebook}
+            >
+              <div className="flex items-center gap-2">
+                <Icons.facebook className="h-7 w-7" />
+                <span className="sr-only">Facebook</span>
+              </div>
+            </Link>
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.linkedin}
+            >
+              <div className="flex items-center gap-2">
+                <Icons.linkedin className="h-7 w-7" />
+                <span className="sr-only">Linkedin</span>
+              </div>
+            </Link>
+
+            <Link
+              target="_blank"
+              rel="noreferrer"
+              href={siteConfig.links.github}
+            >
+              <div className="flex items-center gap-2">
+                <Icons.github className="h-7 w-7" />
+                <span className="sr-only">Github</span>
+              </div>
+            </Link>
+          </div>
         </div>
       </SheetContent>
     </Sheet>
