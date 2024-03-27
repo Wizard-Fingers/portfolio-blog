@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" className="scroll-pt-[3.5rem]">
       <body
         className={cn(
-          "min-h-screen "
+          "min-h-screen bg-brandCol1 dark:bg-brandCol2"
           // quicksand.variable
         )}
       >

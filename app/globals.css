@@ -21,6 +21,28 @@ body {
   font-style: normal;
 }
 
+.bg-graph-paper {
+  background-color: #f5f5f5;
+  background-image: linear-gradient(
+      90deg,
+      rgba(255, 216, 178, 0.3) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(255, 240, 124, 0.3) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .dark\:bg-dark-graph-paper {
+  background-color: #0f1419;
+  background-image: linear-gradient(
+      90deg,
+      rgba(73, 77, 80, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(rgba(73, 77, 80, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
 /* @layer base {
   :root {
     --background: 0 0% 100%;

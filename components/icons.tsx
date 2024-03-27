@@ -5,6 +5,8 @@ import smLogoLight from "../public/static/sm-logo-light.png";
 import smLogoDark from "../public/static/sm-logo-dark.png";
 import logoLight from "../public/static/logo-light.png";
 import logoDark from "../public/static/logo-dark.png";
+import stickFigureReviewsLight from "../public/static/sf-reviews-light.png";
+import stickFigureReviewsDark from "../public/static/sf-reviews-dark.png";
 
 export const Icons = {
   navLogo: () => (
@@ -44,6 +46,25 @@ export const Icons = {
         className="mt-4 hidden dark:block"
       />
       <span className="sr-only">Art Beckett&apos;s signature and logo</span>
+    </>
+  ),
+  stickFigureReviews: () => (
+    <>
+      <Image
+        src={stickFigureReviewsLight}
+        width={80}
+        height={80}
+        alt="Stick Figure Reviews"
+        className="dark:hidden"
+      />
+      <Image
+        src={stickFigureReviewsDark}
+        width={80}
+        height={80}
+        alt="Stick Figure Reviews"
+        className="hidden dark:block"
+      />
+      <span className="sr-only">Stick Figure pointing right</span>
     </>
   ),
   facebook: (props: IconProps) => <FaFacebook {...props} />,
