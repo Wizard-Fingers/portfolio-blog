@@ -1,9 +1,10 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 // import { Quicksand } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { Providers } from "@/components/providers";
+import { siteConfig } from "@/config/site";
 
 // const quicksand = Quicksand({
 //   subsets: ["latin"],
@@ -13,6 +14,14 @@ import { Providers } from "@/components/providers";
 export const metadata: Metadata = {
   title: "Art Beckett",
   description: "I'm a Full Stack Developer",
+  metadataBase: new URL(process.env.Next_PUBLIC_SITE_URL ?? siteConfig.url),
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#F5F5F5" },
+    { media: "(prefers-color-scheme: dark)", color: "#0F1419" },
+  ],
 };
 
 export default function RootLayout({

@@ -15,8 +15,10 @@ export function MainNav() {
       <Link
         href="/blog"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/blog" ? "text-foreground" : "text-foreground/60"
+          "text-sm transition-colors hover:text-brandCol5 dark:hover:text-brandCol6 font-semibold tracking-wide hidden sm:inline-block",
+          pathname === "/blog"
+            ? "text-brandCol5 dark:text-brandCol6"
+            : "text-brandCol3 dark:text-brandCol1"
         )}
       >
         BLOG
@@ -24,17 +26,21 @@ export function MainNav() {
       <Link
         href="/about"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/blog" ? "text-foreground" : "text-foreground/60"
+          "text-sm transition-colors hover:text-brandCol5 dark:hover:text-brandCol6 font-semibold tracking-wide hidden sm:inline-block",
+          pathname === "/about"
+            ? "text-brandCol5 dark:text-brandCol6"
+            : "text-brandCol3 dark:text-brandCol1"
         )}
       >
         ABOUT
       </Link>
       <Link
-        href="/about"
+        href="/projects"
         className={cn(
-          "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
-          pathname === "/projects" ? "text-foreground" : "text-foreground/60"
+          "text-sm transition-colors hover:text-brandCol5 dark:hover:text-brandCol6 font-semibold tracking-wide hidden sm:inline-block",
+          pathname === "/projects"
+            ? "text-brandCol5 dark:text-brandCol6"
+            : "text-brandCol3 dark:text-brandCol1"
         )}
       >
         PROJECTS
