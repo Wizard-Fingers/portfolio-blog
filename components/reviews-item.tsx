@@ -22,8 +22,8 @@ export function ReviewsItem({
   linkedin,
 }: ReviewsItemProps) {
   return (
-    <section className="flex flex-col h-full mx-3 my-8 items-center">
-      <div className=" w-[20rem]">
+    <section className="flex flex-col h-full mx-3 items-center md:my-4 xl:mx-8">
+      <div className="w-[20rem] md:w-[35rem] lg:w-full">
         <div className="bg-brandCol1 w-[4.7rem] rounded-full drop-shadow-md">
           <Image src={picture} alt={name} width={85} height={85} />
         </div>
@@ -40,21 +40,20 @@ export function ReviewsItem({
           </Link>
         </div>
       </div>
-
-      <div className="flex  w-[20rem]">
+      <div className="flex w-[20rem] md:w-[35rem] lg:w-full mt-4">
         <div className="mr-2 text-brandCol5 dark:text-brandCol4">
           <FaLocationDot />
         </div>
-        <h5 className="text-sm underline underline-offset-2">{location}</h5>
+        <h5 className="text-sm">{location}</h5>
       </div>
-      <div className="w-[20rem]">
-        <h4 className="text-sm underline underline-offset-2">{title}</h4>
+      <div className="w-[20rem] md:w-[35rem] lg:w-full">
+        <h4 className="text-sm mt-4 underline underline-offset-2">{title}</h4>
       </div>
-      <section className="my-4 w-[20rem] flex-1">
+      <section className="my-4 w-[20rem] md:w-[35rem] lg:w-full flex-1">
         <div className="flex justify-start -translate-x-[0.1rem]">
           <FaQuoteLeft />
         </div>
-        <div className="my-2 border-l-2 border-brandCol6 pl-2">
+        <div className="my-2 border-l-2 border-brandCol5 dark:border-brandCol6 pl-2">
           <p className="text-sm border-l-2 border-brandCol2 dark:border-brandCol1 pl-2">
             {review}
           </p>

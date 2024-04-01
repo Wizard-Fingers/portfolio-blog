@@ -1,13 +1,11 @@
 import { NextRequest } from "next/server";
 import { ImageResponse } from "next/og";
-// import Image from "next/image";
-// import Logo from "../../../public/static/logo-dark.png";
-// import SEOImage from "../../../components/seo-logo";
-export const runtime = "edge";
 
 const NunitoBold = fetch(
   new URL("../../../assets/fonts/Nunito-SemiBold.ttf", import.meta.url)
 ).then((res) => res.arrayBuffer());
+
+export const runtime = "edge";
 
 export async function GET(req: NextRequest) {
   try {
@@ -27,21 +25,25 @@ export async function GET(req: NextRequest) {
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             height: "100%",
             width: "100%",
             backgroundColor: "#0F1419",
             position: "relative",
           }}
         >
-          <div tw="absolute top-0 left-0 m-4 text-white bg-dark-graph-paper">
-            Art Beckett
-          </div>
-          <div tw="font-nunito text-7xl font-bold text-white mt-12 ml-8 ">
-            {heading}
-          </div>
-          <div tw="flex flex-col items-center justify-center w-full">
-            <div tw="flex flex-col items-center justify-center"></div>
-            <div tw="flex justify-center"></div>
+          <div tw="w-full flex justify-center items-center flex-col">
+            <div tw="absolute top-8 left-8 text-[#F5F5F5] text-2xl font-bold mb-12">
+              Art Beckett
+            </div>
+            <div tw="font-nunito text-6xl font-bold text-[#F5F5F5] mt-40">
+              {heading}
+            </div>
+            <div tw="flex width-full justify-end">
+              <button tw="text-[#F5F5F5] bg-[#F35B04] px-8 py-3 rounded-lg mt-60">
+                Read more
+              </button>
+            </div>
           </div>
         </div>
       ),

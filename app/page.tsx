@@ -75,7 +75,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <div className="bg-brandCol1 dark:bg-brandCol3 py-8 shadow-md">
+          <div className="bg-brandCol1 dark:bg-brandCol3 py-8 shadow-md border-l-0 border-r-0 border-[2px] border-b-brandCol5 border-t-brandCol5 dark:border-b-brandCol4 dark:border-t-brandCol4">
             <ReviewsComponent />
             <div className="flex justify-center py-8">
               <Link

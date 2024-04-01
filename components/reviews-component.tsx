@@ -52,11 +52,13 @@ export function ReviewsComponent(): JSX.Element {
   return (
     <>
       <section>
-        <div className="flex justify-center translate-y-[0.6rem] -translate-x-1 ">
+        <div className="flex justify-center translate-y-4">
           <Icons.lightBulb />
         </div>
-        <div className="text-center dark:text-brandCol4 text-3xl sm:text-4xl md:text-5xl lg:text-t6xl handwritten-font">
-          <h2 className="drop-shadow-md">Reviews</h2>
+        <div className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-t6xl header-font">
+          <h2 className="drop-shadow-md">
+            Re<span className="text-brandCol5 dark:text-brandCol4">views</span>
+          </h2>
         </div>
         <div className="flex flex-col lg:flex-row lg:justify-center space-y-8 lg:space-y-0 lg:space-x-8 mt-8">
           {content.map((review) => (
