@@ -45,24 +45,32 @@ export function ReviewsComponent(): JSX.Element {
       linkedin: "https://www.linkedin.com/in/romualdo-duarte/",
       title: "Former Student, Friend &  Software Developer",
       review:
-        "Art's career transition showcases his commitment to growth and thirst for knowledge. His ability to grasp complex concepts and apply them innovatively is awe-inspiring. Art brings passion and creativity that elevate his technical skills. Watching his evolution has been a privilege. He's not just a talented developer, but an extraordinary person who inspires those around him. Any team would be fortunate to have Art's talent and positive influence.",
+        "Art's career shift really highlights how dedicated he is to growing and learning. I mean, the way he just gets these super complex ideas and then turns them into something amazing is just mind-blowing. He brings so much passion and creativity to everything he does, which totally boosts his technical skills. Watching him grow and evolve has been such a privilege. He's not just a great developer; he's also one of those people who just inspire everyone around him. Honestly, any team would be lucky to have him.",
     },
   ];
 
   return (
     <>
-      <section>
-        <div className="flex justify-center translate-y-4">
-          <Icons.lightBulb />
+      <div className="flex justify-center ">
+        <div className="mt-8">
+          <div className="flex justify-center -translate-y-[3.5rem] -translate-x-[2.5rem] md:translate-x-2 md:-translate-y-[5rem]">
+            <div className=" absolute h-12 w-12 md:h-20 md:w-20 mb-3 md:mr-32">
+              <Icons.lightBulb />
+            </div>
+          </div>
+          <div className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-t6xl header-font">
+            <h2 className="drop-shadow-md">
+              Re
+              <span className="text-brandCol5 dark:text-brandCol4">views</span>
+            </h2>
+          </div>
         </div>
-        <div className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-t6xl header-font">
-          <h2 className="drop-shadow-md">
-            Re<span className="text-brandCol5 dark:text-brandCol4">views</span>
-          </h2>
-        </div>
-        <div className="flex flex-col lg:flex-row lg:justify-center space-y-8 lg:space-y-0 lg:space-x-8 mt-8">
+      </div>
+      <section className=" shadow-lg bg-gradient-to-r from-brandCol8/70 via-brandCol5/70 to-brandCol8/70 dark:from-brandCol3 dark:via-brandCol2 dark:to-brandCol3 border-t-[2px] border-b-[2px] border-brandCol5 dark:border-brandCol4/70 ">
+        {" "}
+        <div className="flex flex-col lg:flex-row lg:justify-center shadow-xl">
           {content.map((review) => (
-            <div key={review.id} className="flex-1 flex flex-col">
+            <div key={review.id} className="flex flex-col">
               <ReviewsItem
                 picture={review.picture}
                 name={review.name}
