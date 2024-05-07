@@ -45,8 +45,8 @@ export default function Home() {
               </span>
             </h1>
             <div className="flex justify-center items-center">
-              <div className="max-w-[50rem] max-h-[40rem] p-4 rounded-md bg-gradient-to-r from-brandCol8/70 via-brandCol5/70 to-brandCol8/70 dark:from-brandCol2/70 dark:via-brandCol1/70 dark:to-brandCol2/70">
-                <div className="bg-brandCol1 dark:bg-brandCol3 dark:bg-brandCol backdrop-blur-lg rounded-lg p-6 shadow-lg supports-[backdrop-filter]bg-background/30">
+              <div className="max-w-[50rem] max-h-[40rem] p-4 rounded-md bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70">
+                <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-6 shadow-lg supports-[backdrop-filter]bg-background/30">
                   <p className="max-w-[40rem] mx-auto text-brandCol2 dark:text-brandCol1 text-muted sm:text-xl text-balance">
                     Welcome to my portfolio and personal corner of the web. As a
                     passionate web developer, I love building websites and
@@ -127,7 +127,7 @@ export default function Home() {
             </span>
           </h2>
           <div className="flex justify-center">
-            <div className="max-w-[50rem] p-4 rounded-lg bg-gradient-to-r from-brandCol8/70 via-brandCol5/70 to-brandCol8/70 dark:from-brandCol2/70 dark:via-brandCol1/70 dark:to-brandCol2/70">
+            <div className="max-w-[50rem] p-4 rounded-lg bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70">
               <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-6 shadow-md supports-[backdrop-filter]bg-background/30">
                 <ul className="flex flex-col gap-8">
                   {latestPosts.map((post) => (
