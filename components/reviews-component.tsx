@@ -51,10 +51,10 @@ export function ReviewsComponent(): JSX.Element {
 
   return (
     <>
-      <div className="flex justify-center ">
-        <div className="mt-8">
+      <div className="flex justify-center">
+        <div className="mt-8 p-4">
           <div className="flex justify-center -translate-y-[3.5rem] -translate-x-[2.5rem] md:translate-x-2 md:-translate-y-[5rem]">
-            <div className=" absolute h-10 w-10 md:h-15 md:w-15 mb-3 md:mr-32 lg:translate-y-[2rem] rotate-12 2xl:translate-y-[2rem] 2xl:h-15 2xl:w-15">
+            <div className="absolute h-10 w-10 md:h-15 md:w-15 mb-3 md:mr-32 lg:translate-y-[2rem] rotate-12 2xl:translate-y-[2rem] 2xl:h-15 2xl:w-15">
               <Icons.lightBulb />
             </div>
           </div>
@@ -66,8 +66,7 @@ export function ReviewsComponent(): JSX.Element {
           </div>
         </div>
       </div>
-      <section className=" shadow-lg bg-gradient-to-r from-brandCol8/70 via-brandCol5/70 to-brandCol8/70 dark:from-brandCol3 dark:via-brandCol2 dark:to-brandCol3 border-t-[2px] border-b-[2px] border-brandCol5 dark:border-brandCol4/70 ">
-        {" "}
+      <section className="shadow-lg bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70 border-t-[2px] border-b-[2px] border-brandCol5 dark:border-brandCol4/70">
         <div className="flex flex-col lg:flex-row lg:justify-center shadow-xl">
           {content.map((review) => (
             <div key={review.id} className="flex flex-col">
