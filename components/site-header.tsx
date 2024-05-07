@@ -14,7 +14,7 @@ export function SiteHeader() {
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">
           <nav className="flex items-center">
-            <section>
+            <section className="mt-2">
               <Link
                 href={siteConfig.links.facebook}
                 target="_blank"
