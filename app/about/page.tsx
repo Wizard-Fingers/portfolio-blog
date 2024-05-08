@@ -91,7 +91,7 @@ export default async function AboutPage() {
         <p>
           I love building websites and helping others achieve their goals
           online. I believe that the web is a powerful tool that can be used to
-          make a positive impact on the world.
+          make a positive impact on you and the world.
         </p>
       </div>
       <div className="w-full h-[1px] dark:bg-brandCol4 bg-brandCol5 rounded-full my-4" />
