@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default async function AboutPage() {
   return (
-    <div className="container max-w-4xl py-6 lg:py-10">
-      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
+    <div className="container max-w-4xl py-6 lg:py-10 border-l border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing">
+      <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8 bg-graph-paper dark:bg-dark-graph-paper">
         <div className="flex-1 space-y-4">
           <div className="flex justify-between items-center">
             <div>
@@ -39,8 +39,8 @@ export default async function AboutPage() {
                 <span className="text-brandCol5 dark:text-brandCol6">me</span>
               </h1>
             </div>
-            <div className="bg-brandCol4 rounded-full shadow-md relative">
-              <div className=" flex items-center -translate-x-[30px] translate-y-[120px] absolute ">
+            <div className="bg-brandCol4 rounded-full shadow-md relative border-dashed-rotate">
+              <div className="flex items-center -translate-x-[30px] translate-y-[120px] absolute">
                 <FaLocationDot className="text-brandCol5 dark:text-brandCol4 text-2xl" />
                 <h5 className="text-md font-bold mt-3">UK</h5>
               </div>
@@ -50,14 +50,14 @@ export default async function AboutPage() {
                   alt="Arthur Beckett"
                   width={150}
                   height={150}
-                  className="block dark:hidden rounded-full drop-shadow-2xl border-4 border-transparent "
+                  className="block dark:hidden rounded-full drop-shadow-2xl border-4 border-transparent"
                 />
                 <Image
                   src={aboutMeDark}
                   alt="Arthur Beckett"
                   width={150}
                   height={150}
-                  className="hidden dark:block rounded-full drop-shadow-2xl border-4 border-transparent "
+                  className="hidden dark:block rounded-full drop-shadow-2xl border-4 border-transparent"
                 />
               </div>
             </div>

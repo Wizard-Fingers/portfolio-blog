@@ -1,16 +1,11 @@
 import { cn } from "@/lib/utils";
 import "./globals.css";
 import type { Metadata, Viewport } from "next";
-// import { Quicksand } from "next/font/google";
 import { SiteHeader } from "@/components/site-header";
 import { Providers } from "@/components/providers";
 import { siteConfig } from "@/config/site";
 import { SiteFooter } from "@/components/site-footer";
-
-// const quicksand = Quicksand({
-//   subsets: ["latin"],
-//   variable: "--font-quicksand",
-// });
+import TransitionProvider from "@/components/transition-provider";
 
 export const metadata: Metadata = {
   title: "Art Beckett",
@@ -32,17 +27,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="scroll-pt-[3.5rem]">
-      <body
-        className={cn(
-          "min-h-screen bg-brandCol1 dark:bg-brandCol2"
-          // quicksand.variable
-        )}
-      >
+      <body className={cn("min-h-screen bg-brandCol1 dark:bg-brandCol2")}>
         <Providers>
           <div className="relative flex min-h-dvh flex-col">
-            <SiteHeader />
-            <main className="flex-1">{children}</main>
-            <SiteFooter />
+            <TransitionProvider>
+              <SiteHeader />
+              <main className="flex-1 pt-[4rem]">{children}</main>
+              <SiteFooter />
+            </TransitionProvider>
           </div>
         </Providers>
       </body>

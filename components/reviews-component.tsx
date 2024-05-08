@@ -52,10 +52,14 @@ export function ReviewsComponent(): JSX.Element {
   return (
     <>
       <div className="flex justify-center">
+        
         <div className="mt-8 p-4">
           <div className="flex justify-center -translate-y-[3.5rem] -translate-x-[2.5rem] md:translate-x-2 md:-translate-y-[5rem]">
             <div className="absolute h-10 w-10 md:h-15 md:w-15 mb-3 md:mr-32 lg:translate-y-[2rem] rotate-12 2xl:translate-y-[2rem] 2xl:h-15 2xl:w-15">
-              <Icons.lightBulb />
+              <div className="absolute inset-0 bg-gradient-to-br from-brandCol4 to-brandCol7 rounded-full filter blur-lg scale-150 opacity-75"></div>
+              <div className="relative z-10">
+                <Icons.lightBulb />
+              </div>
             </div>
           </div>
           <div className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-t6xl header-font">

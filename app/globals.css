@@ -22,36 +22,28 @@ body {
   margin: 0;
   padding: 0;
 }
-
-.bg-graph-paper {
+/* Light mode */
+.graph-paper {
   background-color: #f5f5f5;
   background-image: linear-gradient(
       90deg,
-      rgba(204, 111, 0, 0.2) 1px,
+      rgba(0, 0, 0, 0.1) 1px,
       transparent 1px
     ),
-    linear-gradient(rgba(243, 91, 4, 0.2) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
 }
 
-.dark .dark\:bg-dark-graph-paper {
-  background-color: #0f1419;
+/* Dark mode */
+.graph-paper-dark {
+  background-color: #333; /* Adjust this color as needed */
   background-image: linear-gradient(
       90deg,
-      rgba(73, 77, 80, 0.3) 1px,
+      rgba(255, 255, 255, 0.1) 1px,
       transparent 1px
     ),
-    linear-gradient(rgba(73, 77, 80, 0.3) 1px, transparent 1px);
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
   background-size: 20px 20px;
-}
-
-.light-mode-gradient {
-  background: linear-gradient(135deg, #fff9e5, #ffe5b2);
-  color: #0f1419;
-}
-.dark-mode-gradient {
-  background: linear-gradient(135deg, #ff8c00, #f35b04);
-  color: #f5f5f5;
 }
 
 /* @layer base {
@@ -109,7 +101,7 @@ body {
     @apply bg-background text-foreground;
   }
 } */
-/* Webkit browsers (Chrome, Safari) */
+
 ::-webkit-scrollbar {
   width: 14px;
 }
@@ -130,16 +122,10 @@ body {
   background-color: #494d50;
 }
 
-/* Firefox */
 * {
-  scrollbar-width: auto;
+  scrollbar-width: thin;
   scrollbar-color: #0f1419 #f5f5f5;
 }
-
-/* Edge and IE */
-/* body {
-  -ms-overflow-style: none;
-} */
 
 ::-ms-thumb {
   background-color: #0f1419;
@@ -148,11 +134,41 @@ body {
   transition: background-color 0.3s ease;
 }
 
-/* ::-ms-thumb:hover {
-  background-color: #494d50;
-} */
-/* 
-::-ms-track {
-  background-color: #f5f5f5;
-  border-radius: 7px;
-} */
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.border-dashed-rotate {
+  position: relative;
+}
+
+.border-dashed-rotate::before {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  border: 2px dashed #fff07c;
+  border-radius: 50%;
+  animation: rotate 30s linear infinite;
+  box-shadow: 0 0 10px #f35b04;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.dash-spacing {
+  stroke-dasharray: 8 16;
+}

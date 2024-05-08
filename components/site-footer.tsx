@@ -1,12 +1,4 @@
-import {
-  Mail,
-  Phone,
-  Home,
-  User,
-  FileText,
-  Code,
-  Terminal,
-} from "lucide-react";
+import { Mail, Phone, Home, User, FileText, Code } from "lucide-react";
 import Link from "next/link";
 import {
   FaHtml5,
@@ -14,10 +6,12 @@ import {
   FaJs,
   FaReact,
   FaPython,
-  FaNodeJs,
   FaFileDownload,
 } from "react-icons/fa";
 import { SiDjango, SiNextdotjs } from "react-icons/si";
+import SigBlack from "../public/sig-black.png";
+import SigLight from "../public/logo-dark.png";
+import Image from "next/image";
 
 export function SiteFooter() {
   return (
@@ -72,7 +66,22 @@ export function SiteFooter() {
           {/* Name */}
           <div className="md:col-span-2 lg:col-span-1 flex flex-col items-center">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4">Art Beckett</h3>
+              <div className="flex justify-center">
+                <Image
+                  src={SigBlack}
+                  alt="Art Beckett"
+                  width={100}
+                  height={100}
+                  className="dark:hidden"
+                />
+                <Image
+                  src={SigLight}
+                  alt="Art Beckett"
+                  width={100}
+                  height={100}
+                  className="hidden dark:block"
+                />
+              </div>
               <p className="mb-4">Web Developer | Creative | Innovator</p>
             </div>
             <div className="flex flex-wrap justify-center space-x-4">
@@ -83,7 +92,6 @@ export function SiteFooter() {
               <SiNextdotjs className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
               <FaPython className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
               <SiDjango className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <FaNodeJs className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
             </div>
           </div>
 

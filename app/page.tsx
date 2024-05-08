@@ -9,14 +9,13 @@ import crownDark from "../public/crown-dark.png";
 import crownLight from "../public/crown-light.png";
 import letterLight from "../public/letter-light.png";
 import letterDark from "../public/letter-dark.png";
-import { FaFileDownload } from "react-icons/fa";
 import { ReviewsComponent } from "@/components/reviews-component";
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 3);
   return (
     <>
-      <div className="bg-graph-paper dark:bg-dark-graph-paper">
+      <div className="">
         <section className="">
           <div className="container flex flex-col gap-4 text-center">
             <div className="flex justify-center lg:translate-y-10 translate-y-7">
@@ -58,7 +57,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-6 justify-center sm:flex-row mt-8 mb-16">
+            <div className="flex flex-col gap-6 justify-center sm:flex-row mt-8 mb-[7rem]">
               <Link
                 href="/blog"
                 className={cn(
@@ -82,24 +81,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing border-t" />
           <div className="bg-brandCol1/70 dark:bg-brandCol3/70 space-y-2">
             <ReviewsComponent />
-            <div className="flex justify-center py-8">
-              <Link
-                href="/"
-                target="_blank"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "w-full sm:w-fit handwritten-font mx-8"
-                )}
-              >
-                my Resume/CV
-                <FaFileDownload className="ml-2" />
-              </Link>
-            </div>
           </div>
         </section>
-
+        <div className="border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing border-t mt-1" />
         <section className="container max-w-4xl py-12 lg:py-16 flex flex-col space-y-8">
           <div className="relative">
             <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-12">
