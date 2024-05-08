@@ -40,9 +40,9 @@ export default async function AboutPage() {
               </h1>
             </div>
             <div className="bg-brandCol4 rounded-full shadow-md relative">
-              <div className=" flex items-center -translate-x-[35px] translate-y-[120px] absolute ">
+              <div className=" flex items-center -translate-x-[30px] translate-y-[120px] absolute ">
                 <FaLocationDot className="text-brandCol5 dark:text-brandCol4 text-2xl" />
-                <h5 className="text-md font-bold">UK</h5>
+                <h5 className="text-md font-bold mt-3">UK</h5>
               </div>
               <div className="w-[150px] h-[150px] rounded-full overflow-hidden">
                 <Image
