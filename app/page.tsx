@@ -5,10 +5,10 @@ import Link from "next/link";
 import { posts } from "#site/content";
 import { PostItem } from "@/components/post-item";
 import Image from "next/image";
-import crownDark from "../public/static/crown-dark.png";
-import crownLight from "../public/static/crown-light.png";
-import letterLight from "../public/static/letter-light.png";
-import letterDark from "../public/static/letter-dark.png";
+import crownDark from "../public/crown-dark.png";
+import crownLight from "../public/crown-light.png";
+import letterLight from "../public/letter-light.png";
+import letterDark from "../public/letter-dark.png";
 import { FaFileDownload } from "react-icons/fa";
 import { ReviewsComponent } from "@/components/reviews-component";
 

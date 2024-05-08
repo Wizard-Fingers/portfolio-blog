@@ -1,8 +1,8 @@
 import { ReviewsItem } from "./reviews-item";
 import { Icons } from "./icons";
-import rom from "../public/static/rom.png";
-import chris from "../public/static/chris.png";
-import emily from "../public/static/emily.png";
+import rom from "../public/rom.png";
+import chris from "../public/chris.png";
+import emily from "../public/emily.png";
 import { StaticImageData } from "next/image";
 
 interface Review {

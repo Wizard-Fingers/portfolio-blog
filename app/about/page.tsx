@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import aboutMeDark from "../../public/static/about-pic-dark.png";
-import aboutMeLight from "../../public/static/about-pic-light.png";
-import aboutMeLogoDark from "../../public/static/about-logo-dark.png";
-import aboutMeLogoLight from "../../public/static/about-logo-light.png";
+import aboutMeDark from "../../public/about-pic-dark.png";
+import aboutMeLight from "../../public/about-pic-light.png";
+import aboutMeLogoDark from "../../public/about-logo-dark.png";
+import aboutMeLogoLight from "../../public/about-logo-light.png";
 import Image from "next/image";
 import { FaLocationDot } from "react-icons/fa6";
 

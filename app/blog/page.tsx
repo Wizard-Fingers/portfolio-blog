@@ -3,8 +3,8 @@ import { PostItem } from "@/components/post-item";
 import { QueryPagination } from "@/components/querry-pagination";
 import { sortPosts } from "@/lib/utils";
 import { Metadata } from "next";
-import blogImgDark from "../../public/static/blog-img-dark.png";
-import blogImgLight from "../../public/static/blog-img-light.png";
+import blogImgDark from "../../public/blog-img-dark.png";
+import blogImgLight from "../../public/blog-img-light.png";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -52,8 +52,8 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
           </h1>
           <p className="text-xl text-muted">
             Explore my personal insights and experiences in web development, the
-            valuable lessons I&apos;ve learned along the way, and get to know a bit
-            about the person behind my code.
+            valuable lessons I&apos;ve learned along the way, and get to know a
+            bit about the person behind my code.
           </p>
         </div>
       </div>
