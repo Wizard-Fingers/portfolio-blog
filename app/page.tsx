@@ -15,7 +15,7 @@ export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 3);
   return (
     <>
-      <div className="">
+      <div className="graph-paper dark:graph-paper-dark">
         <section className="">
           <div className="container flex flex-col gap-4 text-center">
             <div className="flex justify-center lg:translate-y-10 translate-y-7">
@@ -34,7 +34,7 @@ export default function Home() {
                 className="dark:hidden h-[2rem] w-[2rem] md:h-[4rem] md:w-[4rem]"
               />
             </div>
-            <h1 className="text-4xl sm:text-7xl md:text-6xl lg:text-7xl text-balance header-font leading-tight lg:mb-6">
+            <h1 className="text-4xl sm:text-7xl md:text-6xl lg:text-7xl text-balance header-font font-bold leading-tight lg:mb-6">
               Hi, I&apos;m{" "}
               <span className="tracking-widest">
                 <span className="dark:text-brandCol6 text-brandCol5 drop-shadow-md">
@@ -107,7 +107,7 @@ export default function Home() {
             </div>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl md:6xl lg:text-7xl text-center">
+          <h2 className="text-3xl sm:text-5xl md:6xl lg:text-7xl text-center font-bold header-font">
             Latest{" "}
             <span className="dark:text-brandCol6 text-brandCol5 drop-shadow-md">
               Posts

@@ -47,7 +47,7 @@ export default async function BlogPage({ searchParams }: BlogPageProps) {
               height={50}
             />
           </div>
-          <h1 className="inline-block text-4xl lg:text-5xl">
+          <h1 className="inline-block text-4xl lg:text-5xl header-font font-bold">
             My <span className="text-brandCol5 dark:text-brandCol6">Blog</span>
           </h1>
           <p className="text-xl text-muted">

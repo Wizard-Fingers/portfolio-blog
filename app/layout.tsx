@@ -32,7 +32,9 @@ export default function RootLayout({
           <div className="relative flex min-h-dvh flex-col">
             <TransitionProvider>
               <SiteHeader />
+
               <main className="flex-1 pt-[4rem]">{children}</main>
+
               <SiteFooter />
             </TransitionProvider>
           </div>
