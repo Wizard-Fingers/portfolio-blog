@@ -1,4 +1,4 @@
-import { Mail, Phone, Home, User, FileText, Code } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import Link from "next/link";
 import {
   FaHtml5,
@@ -12,7 +12,8 @@ import { SiDjango, SiNextdotjs } from "react-icons/si";
 import SigBlack from "../public/sig-black.png";
 import SigLight from "../public/logo-dark.png";
 import Image from "next/image";
-
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 export function SiteFooter() {
   return (
     <footer className="bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70 drop-shadow-lg shadow-md">
@@ -24,37 +25,45 @@ export function SiteFooter() {
             <ul className="grid grid-cols-2 gap-4">
               <li className="flex justify-center">
                 <Link
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "lg" }),
+                    "w-full sm:w-48 handwritten-font drop-shadow-lg flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
+                  )}
                   href="/"
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
                 >
-                  <Home className="h-5 w-5" />
                   <span>Home</span>
                 </Link>
               </li>
               <li className="flex justify-center">
                 <Link
                   href="/blog"
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "lg" }),
+                    "w-full sm:w-48 handwritten-font drop-shadow-lg flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
+                  )}
                 >
-                  <FileText className="h-5 w-5" />
                   <span>Blog</span>
                 </Link>
               </li>
               <li className="flex justify-center">
                 <Link
                   href="/about"
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "lg" }),
+                    "w-full sm:w-48 handwritten-font drop-shadow-lg flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
+                  )}
                 >
-                  <User className="h-5 w-5" />
                   <span>About</span>
                 </Link>
               </li>
               <li className="flex justify-center">
                 <Link
                   href="/projects"
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "lg" }),
+                    "w-full sm:w-48 handwritten-font drop-shadow-lg flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
+                  )}
                 >
-                  <Code className="h-5 w-5" />
                   <span>Projects</span>
                 </Link>
               </li>
@@ -102,7 +111,7 @@ export function SiteFooter() {
               <li className="flex justify-center">
                 <a
                   href="mailto:art.b.beckett@gmail.com"
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                  className="flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
                 >
                   <Mail className="h-5 w-5" />
                   <span>art.b.beckett@gmail.com</span>
@@ -111,7 +120,7 @@ export function SiteFooter() {
               <li className="flex justify-center">
                 <a
                   href="tel:+447925578819"
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                  className="flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
                 >
                   <Phone className="h-5 w-5" />
                   <span>+44 7925 578819</span>
@@ -121,7 +130,7 @@ export function SiteFooter() {
                 <a
                   href="/path/to/your/cv.pdf"
                   download
-                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                  className="flex items-center space-x-2 hover:text-brandCol5 dark:hover:text-brandCol6"
                 >
                   <FaFileDownload className="h-5 w-5" />
                   <span>Download CV</span>
