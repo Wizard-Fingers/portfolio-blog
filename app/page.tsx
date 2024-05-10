@@ -1,3 +1,5 @@
+"use client";
+import { useTheme } from "next-themes";
 import { buttonVariants } from "@/components/ui/button";
 import { siteConfig } from "@/config/site";
 import { cn, sortPosts } from "@/lib/utils";
@@ -10,12 +12,14 @@ import crownLight from "../public/crown-light.png";
 import letterLight from "../public/letter-light.png";
 import letterDark from "../public/letter-dark.png";
 import { ReviewsComponent } from "@/components/reviews-component";
-
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 3);
+  const { theme } = useTheme();
   return (
     <>
-      <div className="graph-paper dark:graph-paper-dark">
+      <div
+        className={`${theme === "dark" ? "dark-graph-paper" : "graph-paper"}  `}
+      >
         <section className="">
           <div className="container flex flex-col gap-4 text-center">
             <div className="flex justify-center lg:translate-y-10 translate-y-7">
@@ -57,16 +61,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-6 justify-center sm:flex-row mt-8 mb-[7rem]">
-              <Link
-                href="/blog"
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "w-full sm:w-48 handwritten-font"
-                )}
-              >
-                my Blog
-              </Link>
+            <div className="flex flex-col gap-6 justify-center sm:flex-row mt-8 mb-[7rem] relative">
               <div className="hidden lg:block">
                 <Link
                   href={siteConfig.links.github}
@@ -79,6 +74,15 @@ export default function Home() {
                   my Github
                 </Link>
               </div>
+              <Link
+                href="/blog"
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "w-full sm:w-48 handwritten-font"
+                )}
+              >
+                my Blog
+              </Link>
             </div>
           </div>
           <div className="border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing border-t" />
@@ -86,6 +90,7 @@ export default function Home() {
             <ReviewsComponent />
           </div>
         </section>
+
         <div className="border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing border-t mt-1" />
         <section className="container max-w-4xl py-12 lg:py-16 flex flex-col space-y-8">
           <div className="relative">

@@ -96,7 +96,7 @@ export function SiteFooter() {
           </div>
 
           {/* Contact */}
-          <div className="md:col-span-2 lg:col-span-1">
+          <div className="md:col-span-2 lg:col-span-1 drop-shadow-lg">
             <h3 className="text-xl font-bold mb-4 text-center">
               Contact info and CV
             </h3>

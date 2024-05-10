@@ -9,7 +9,7 @@ import { ModeToggle } from "./mode-toggle";
 
 export function SiteHeader() {
   return (
-    <header className="fixed top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/30 z-10">
+    <header className="fixed top-0 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/30 z-10 drop-shadow-lg ">
       <div className="container flex h-[4rem] max-w-screen-xl items-center">
         <MainNav />
         <div className="flex flex-1 items-center justify-end space-x-2">

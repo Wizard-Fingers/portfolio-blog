@@ -3,11 +3,13 @@ import rehypeSlug from "rehype-slug";
 import rehypePrettyCode from "rehype-pretty-code";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
+// Function to compute additional fields for posts
 const computedFields = <T extends { slug: string }>(data: T) => ({
   ...data,
   slugAsParams: data.slug.split("/").slice(1).join("/"),
 });
 
+// Define a collection for posts
 const posts = defineCollection({
   name: "Posts",
   pattern: "blog/**/*.mdx",
@@ -23,6 +25,7 @@ const posts = defineCollection({
     .transform(computedFields),
 });
 
+// Export the Velite configuration
 export default defineConfig({
   root: "content",
   output: {

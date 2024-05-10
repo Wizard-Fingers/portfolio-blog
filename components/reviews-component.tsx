@@ -1,10 +1,12 @@
+"use client";
 import { ReviewsItem } from "./reviews-item";
 import { Icons } from "./icons";
 import rom from "../public/rom.png";
 import chris from "../public/chris.png";
 import emily from "../public/emily.png";
 import { StaticImageData } from "next/image";
-
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
 interface Review {
   id: number;
   picture: StaticImageData;
@@ -48,6 +50,17 @@ export function ReviewsComponent(): JSX.Element {
         "Art's career shift really highlights how dedicated he is to growing and learning. I mean, the way he just gets these super complex ideas and then turns them into something amazing is just mind-blowing. He brings so much passion and creativity to everything he does, which totally boosts his technical skills. Watching him grow and evolve has been such a privilege. He's not just a great developer; he's also one of those people who just inspire everyone around him. Honestly, any team would be lucky to have him.",
     },
   ];
+  // lightbulb rotates on theme change
+  const { theme } = useTheme();
+  const [gradientRotation, setGradientRotation] = useState("rotate-0");
+
+  useEffect(() => {
+    if (theme === "dark") {
+      setGradientRotation("rotate-180");
+    } else {
+      setGradientRotation("rotate-0");
+    }
+  }, [theme]);
 
   return (
     <>
@@ -55,16 +68,20 @@ export function ReviewsComponent(): JSX.Element {
         <div className="mt-8 p-4">
           <div className="flex justify-center -translate-y-[3.5rem] -translate-x-[2.5rem] md:translate-x-2 md:-translate-y-[5rem]">
             <div className="absolute h-10 w-10 md:h-15 md:w-15 mb-3 md:mr-32 lg:translate-y-[2rem] rotate-12 2xl:translate-y-[2rem] 2xl:h-15 2xl:w-15">
-              <div className="absolute inset-0 bg-gradient-to-br from-brandCol4 to-brandCol7 rounded-full filter blur-lg scale-150 opacity-75"></div>
-              <div className="relative z-10">
-                <Icons.lightBulb />
+              <div
+                className={`absolute inset-0 bg-gradient-to-br from-brandCol1 via-brandCol4 to-brandCol7 rounded-full filter blur-lg scale-150 opacity-75 ${gradientRotation}`}
+              ></div>
+              <div className="relative z-10 drop-shadow-2xl">
+                {Icons.lightBulb()}
               </div>
             </div>
           </div>
           <div className="text-center text-3xl sm:text-4xl md:text-5xl lg:text-t6xl header-font font-bold">
             <h2 className="drop-shadow-md">
               Re
-              <span className="text-brandCol5 dark:text-brandCol6">views</span>
+              <span className="text-brandCol5 dark:text-brandCol6 drop-shadow-2xl">
+                views
+              </span>
             </h2>
           </div>
         </div>

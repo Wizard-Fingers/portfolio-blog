@@ -22,7 +22,7 @@ export function ReviewsItem({
   linkedin,
 }: ReviewsItemProps) {
   return (
-    <section className="flex flex-col h-full p-4 bg-brandCol1 dark:bg-brandCol3 shadow-md rounded-lg m-2 lg:m-">
+    <section className="flex flex-col h-full p-4 bg-brandCol1 dark:bg-brandCol3 shadow-md rounded-lg m-2 lg:m-4">
       {/* Image and Location */}
       <div className="flex items-center mb-4 relative">
         <div className="w-20 h-20 md:w-30 md:h-30 rounded-full bg-brandCol6 dark:bg-brandCol6 drop-shadow-md overflow-hidden">
