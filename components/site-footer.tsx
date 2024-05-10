@@ -15,56 +15,54 @@ import Image from "next/image";
 
 export function SiteFooter() {
   return (
-    <footer className="bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70">
+    <footer className="bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70 drop-shadow-lg shadow-md">
       <div className="container mx-auto py-8 px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sitemap */}
-          <div className="md:col-span-2 lg:col-span-1">
+          <div className="bg-brandCol1/70 dark:bg-brandCol3/70 rounded-lg p-6 shadow">
             <h3 className="text-xl font-bold mb-4 text-center">Sitemap</h3>
-            <div className="flex justify-center items-center">
-              <ul className="grid grid-cols-2 gap-4">
-                <li>
-                  <Link
-                    href="/"
-                    className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
-                  >
-                    <Home className="h-5 w-5" />
-                    <span>Home</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/blog"
-                    className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
-                  >
-                    <FileText className="h-5 w-5" />
-                    <span>Blog</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/about"
-                    className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
-                  >
-                    <User className="h-5 w-5" />
-                    <span>About</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/projects"
-                    className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
-                  >
-                    <Code className="h-5 w-5" />
-                    <span>Projects</span>
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            <ul className="grid grid-cols-2 gap-4">
+              <li className="flex justify-center">
+                <Link
+                  href="/"
+                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                >
+                  <Home className="h-5 w-5" />
+                  <span>Home</span>
+                </Link>
+              </li>
+              <li className="flex justify-center">
+                <Link
+                  href="/blog"
+                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                >
+                  <FileText className="h-5 w-5" />
+                  <span>Blog</span>
+                </Link>
+              </li>
+              <li className="flex justify-center">
+                <Link
+                  href="/about"
+                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                >
+                  <User className="h-5 w-5" />
+                  <span>About</span>
+                </Link>
+              </li>
+              <li className="flex justify-center">
+                <Link
+                  href="/projects"
+                  className="flex items-center space-x-2 hover:text-brandCol1 dark:hover:text-brandCol5"
+                >
+                  <Code className="h-5 w-5" />
+                  <span>Projects</span>
+                </Link>
+              </li>
+            </ul>
           </div>
 
           {/* Name */}
-          <div className="md:col-span-2 lg:col-span-1 flex flex-col items-center">
+          <div className="bg-brandCol1/70 dark:bg-brandCol3/70 rounded-lg p-6 shadow flex flex-col items-center justify-center">
             <div className="text-center">
               <div className="flex justify-center">
                 <Image
@@ -83,24 +81,24 @@ export function SiteFooter() {
                 />
               </div>
               <p className="mb-4">Web Developer | Creative | Innovator</p>
-            </div>
-            <div className="flex flex-wrap justify-center space-x-4">
-              <FaHtml5 className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <FaCss3Alt className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <FaJs className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <FaReact className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <SiNextdotjs className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <FaPython className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
-              <SiDjango className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+              <div className="flex flex-wrap justify-center space-x-4">
+                <FaHtml5 className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+                <FaCss3Alt className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+                <FaJs className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+                <FaReact className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+                <SiNextdotjs className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+                <FaPython className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+                <SiDjango className="h-6 w-6 text-brandCol2 dark:text-brandCol6" />
+              </div>
             </div>
           </div>
 
           {/* Contact */}
-          <div className="md:col-span-2 lg:col-span-1 drop-shadow-lg">
+          <div className="bg-brandCol1/70 dark:bg-brandCol3/70 rounded-lg p-6 shadow">
             <h3 className="text-xl font-bold mb-4 text-center">
               Contact info and CV
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-4">
               <li className="flex justify-center">
                 <a
                   href="mailto:art.b.beckett@gmail.com"

@@ -23,7 +23,7 @@ function ClientComponent() {
         } py-4 lg:py-6`}
       >
         <div className="container max-w-4xl border-l border-b border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing shadow-xl bg-white/70 dark:bg-brandCol3/70 backdrop-blur-md pr-4 py-4">
-          <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8 bg-graph-paper dark:bg-dark-graph-paper">
+          <div className="flex flex-col items-start gap-4 md:flex-row md:justify-between md:gap-8">
             <div className="flex-1 space-y-4">
               <div className="flex justify-between items-center">
                 <div>
