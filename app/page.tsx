@@ -14,6 +14,14 @@ import letterDark from "../public/letter-dark.png";
 import { ReviewsComponent } from "@/components/reviews-component";
 import SmileDark from "../public/smile-dark.png";
 import SmileLight from "../public/smile-light.png";
+import DoodleClock from "@/components/clock-doodle";
+// import BugDoodleGame from "@/components/bug-doodle-game";
+// import CircleDoodle from "@/components/circle-doodle";
+// import DoodleArrowsLight from "../public/doodle-arrows-light.png";
+// import DoodleArrowsDark from "@/public/doodle-arrows-dark.png";
+import mouseLight from "../public/mouse-light.png";
+import mouseDark from "../public/mouse-dark.png";
+
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 3);
   const { theme } = useTheme();
@@ -24,7 +32,7 @@ export default function Home() {
       >
         <section className="">
           <div className="container flex flex-col gap-4 text-center">
-            <div className="flex justify-center lg:translate-y-10 translate-y-7">
+            <div className="flex justify-center lg:translate-y-10 translate-y-7 ">
               <Image
                 height={70}
                 width={70}
@@ -42,14 +50,14 @@ export default function Home() {
             </div>
             <h1 className="text-4xl sm:text-7xl md:text-6xl lg:text-7xl text-balance header-font font-bold leading-tight lg:mb-6">
               Hi, I&apos;m{" "}
-              <span className="tracking-widest">
-                <span className="dark:text-brandCol6 text-brandCol5 drop-shadow-md">
+              <span className="tracking-wide">
+                <span className="dark:text-brandCol10 text-brandCol5 drop-shadow-md handwritten-font font-semibold">
                   Art
                 </span>
                 hur
               </span>
             </h1>
-            <div className="flex justify-center h-[5.5rem] xl:h-[6.5rem]">
+            <div className="flex justify-center h-[5.5rem] xl:h-[7.5rem]">
               <div className="absolute -translate-y-[6rem]">
                 <Image
                   src={SmileLight}
@@ -68,7 +76,7 @@ export default function Home() {
               </div>
             </div>
             <div className="flex justify-center items-center">
-              <div className="max-w-[50rem] max-h-[40rem] p-4 rounded-md bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70 animate-subtle-glow">
+              <div className="max-w-[50rem] max-h-[40rem] p-4 rounded-md bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol9/70 dark:via-brandCol10/70 dark:to-brandCol10/70 animate-subtle-glow">
                 <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-4 shadow-lg supports-[backdrop-filter]bg-background/30">
                   <p className="max-w-[50rem] mx-auto text-brandCol2 dark:text-brandCol1 sm:text-xl text-balance handwritten-font">
                     Welcome to my portfolio and personal corner of the web.
@@ -87,14 +95,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-6 justify-center sm:flex-row mt-8 lg:mb-[7rem] mb-[4rem] relative">
+            <div className="flex flex-col gap-6 justify-center sm:flex-row mt-6 lg:mt-[5rem] mb-[4rem] relative">
               <div className="hidden lg:block">
                 <Link
                   href={siteConfig.links.github}
                   target="_blank"
                   className={cn(
                     buttonVariants({ variant: "ghost", size: "lg" }),
-                    "w-full sm:w-48 handwritten-font drop-shadow-lg"
+                    "w-full sm:w-48 handwritten-font drop-shadow-lg text-brandCol9 dark:text-brandCol10 "
                   )}
                 >
                   my Github
@@ -110,6 +118,16 @@ export default function Home() {
                 my Blog
               </Link>
             </div>
+            {/* doodle fun */}
+
+            <div className="flex flex-col h-full">
+              <div className="w-full sm:w-1/3 lg:w-auto lg:mx-auto">
+                <DoodleClock />
+              </div>
+              {/* <div className="flex-grow h-full">
+                <BugDoodleGame />
+              </div> */}
+            </div>
           </div>
           <div className="border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing border-t" />
           <div className="bg-brandCol1/70 dark:bg-brandCol3/70 space-y-2">
@@ -119,8 +137,11 @@ export default function Home() {
 
         <div className="border-dashed border-brandCol2 dark:border-brandCol1 dash-spacing border-t mt-1" />
         <section className="container max-w-4xl py-12 lg:py-16 flex flex-col space-y-8">
-          <div className="relative">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 -rotate-12">
+          <div className="relative flex justify-center -translate-y-7">
+            <div
+              className="absolute top-0 transform animate-letter-rotate 
+            "
+            >
               <Image
                 src={letterDark}
                 alt="letter"
@@ -144,8 +165,28 @@ export default function Home() {
               Posts
             </span>
           </h2>
+          {/* mouse */}
+          <div className="flex">
+            <div className="absolute -translate-y-[12.5rem] -translate-x-[5rem] hidden lg:block">
+              <Image
+                src={mouseLight}
+                alt="mouse"
+                className="dark:hidden"
+                width={150}
+                height={150}
+              />
+              <Image
+                src={mouseDark}
+                alt="mouse"
+                className="hidden dark:block"
+                width={150}
+                height={150}
+              />
+            </div>
+          </div>
+
           <div className="flex justify-center">
-            <div className="max-w-[50rem] p-4 rounded-lg bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70 animate-subtle-glow">
+            <div className="max-w-[50rem] p-4 rounded-lg bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol9/70 dark:via-brandCol10/70 dark:to-brandCol10/70 animate-subtle-glow">
               <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-6 shadow-md supports-[backdrop-filter]bg-background/30">
                 <ul className="flex flex-col gap-8">
                   {latestPosts.map((post) => (

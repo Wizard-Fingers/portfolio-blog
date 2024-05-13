@@ -14,13 +14,14 @@ import SigLight from "../public/logo-dark.png";
 import Image from "next/image";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+
 export function SiteFooter() {
   return (
-    <footer className="bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol3/70 dark:via-brandCol2/70 dark:to-brandCol3/70 drop-shadow-lg shadow-md">
+    <footer className="bg-gradient-to-r from-brandCol8/70 via-brandCol6/70 to-brandCol5/70 dark:from-brandCol9/70 dark:via-brandCol10/70 dark:to-brandCol10/70 drop-shadow-lg shadow-md">
       <div className="container mx-auto py-8 px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Sitemap */}
-          <div className="bg-brandCol1/70 dark:bg-brandCol3/70 rounded-lg p-6 shadow">
+          <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-6 shadow">
             <h3 className="text-xl font-bold mb-4 text-center">Sitemap</h3>
             <ul className="grid grid-cols-2 gap-4">
               <li className="flex justify-center">
@@ -71,7 +72,7 @@ export function SiteFooter() {
           </div>
 
           {/* Name */}
-          <div className="bg-brandCol1/70 dark:bg-brandCol3/70 rounded-lg p-6 shadow flex flex-col items-center justify-center">
+          <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-6 shadow flex flex-col items-center justify-center">
             <div className="text-center">
               <div className="flex justify-center">
                 <Image
@@ -103,7 +104,7 @@ export function SiteFooter() {
           </div>
 
           {/* Contact */}
-          <div className="bg-brandCol1/70 dark:bg-brandCol3/70 rounded-lg p-6 shadow">
+          <div className="bg-brandCol1 dark:bg-brandCol3 backdrop-blur-lg rounded-lg p-6 shadow">
             <h3 className="text-xl font-bold mb-4 text-center">
               Contact info and CV
             </h3>
