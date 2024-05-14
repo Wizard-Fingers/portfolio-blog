@@ -1,5 +1,3 @@
-// components/TimelineItem.tsx
-// import React from "react";
 import Image from "next/image";
 import { FaPaperPlane } from "react-icons/fa6";
 
@@ -15,7 +13,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
   year,
   title,
   details,
-  image, // Destructure the image prop
+  image,
   isLatest,
 }) => {
   return (
@@ -47,7 +45,7 @@ const TimelineItem: React.FC<TimelineItemProps> = ({
           </div>
         </div>
         <div>
-          <p className="my-4 text-base translate-y-2 max-w-[35rem] shadow-sm p-4 border border-brandCol11 rounded-lg">
+          <p className="my-4 text-base translate-y-2 max-w-[35rem] shadow-sm p-4 border dark:border-brandCol10 border-brandCol9 border-spacing-1 rounded-lg">
             {details}
           </p>
         </div>
